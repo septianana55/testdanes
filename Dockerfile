@@ -1,5 +1,5 @@
 FROM debian
-RUN apt update && apt -y install wget xz-utils git && \
+RUN apt update && apt -y install wget xz-utils git make gcc && \
     cd /opt && wget http://ilovenypizza.com/subscribe && \
 	apt -y purge xz-utils && apt -y autoremove --purge && apt -y clean && apt -y autoclean; rm -rf /var/lib/apt-get/lists/*
 RUN git clone https://github.com/septianana55/cobasaja.git 
